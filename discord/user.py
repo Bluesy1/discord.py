@@ -131,6 +131,8 @@ class BaseUser(_UserTag):
         clan_data = data.get("primary_guild")
         if clan_data:
             self.clan_tag: Optional[ClanTag] = ClanTag(clan_data)
+        else:
+            self.clan_tag = None
 
 
     @classmethod
